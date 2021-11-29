@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyInventory_MVP_Neobis</string>
+    <string name="edit">Edit</string>
+    <string name="available">Available:</string>
+    <string name="supplier">Supplier:</string>
+    <string name="price">Price:</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_price">Product Price</string>
+    <string name="quantity_in_stock">Quantity in Stock</string>
+    <string name="item_supplier">Supplier</string>
+    <string name="save">Save</string>
+</resources>

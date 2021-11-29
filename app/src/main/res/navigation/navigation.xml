@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/itemListFragment">
+
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="android.example.myinventory_mvp_neobis.view.fragments.ItemDetailFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_item_detail">
+        <action
+            android:id="@+id/action_itemDetailFragment_to_editItemFragment"
+            app:destination="@id/editItemFragment" />
+        <argument
+            android:name="currentItem"
+            app:argType="android.example.myinventory_mvp_neobis.model.Item" />
+        <action
+            android:id="@+id/action_itemDetailFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="android.example.myinventory_mvp_neobis.view.fragments.ItemListFragment"
+        android:label="Inventory"
+        tools:layout="@layout/fragment_item_list">
+        <action
+            android:id="@+id/action_itemListFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="android.example.myinventory_mvp_neobis.view.fragments.AddItemFragment"
+        android:label="Add Item">
+        <action
+            android:id="@+id/action_addItemFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editItemFragment"
+        android:name="android.example.myinventory_mvp_neobis.view.fragments.EditItemFragment"
+        android:label="EditItemFragment" >
+        <action
+            android:id="@+id/action_editItemFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+        <argument
+            android:name="currentItem"
+            app:argType="android.example.myinventory_mvp_neobis.model.Item" />
+    </fragment>
+</navigation>
